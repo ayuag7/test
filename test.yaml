@@ -1,1 +1,4 @@
-#
+resources:
+- repo: self
+  fetchDepth: 15
+
