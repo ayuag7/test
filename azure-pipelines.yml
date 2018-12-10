@@ -16,6 +16,6 @@ steps:
   displayName: 'Run a multi-line script'
 
 - task: GithubRelease@0
- 	inputs:
- 	githubConnection: 'ayuag7'
- 	repositoryName: ayuag7/test
+  inputs:
+    githubConnection: 'ayuag7'
+    repositoryName: ayuag7/test
