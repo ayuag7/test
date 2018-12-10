@@ -7,7 +7,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- task: GithubRelease@0
+- task: GithubRelease@0
   inputs:
     githubConnection: 'ayuag7'
     repositoryName: ayuag7/test
