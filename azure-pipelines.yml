@@ -1,13 +1,22 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4123y
 
-pool:
-  vmImage: 'Ubuntu 16.04'
+
+variables:
+ - group: ar1
 
 steps:
-- task: GithubRelease@0
+- task: NuGetToolInstaller@0
+
+- task: NuGetCommand@2
   inputs:
-    githubConnection: 'ayuag7'
-    repositoryName: ayuag7/test
+    restoreSolution: '$(solution)'
+    
+- task: AzureResourceGroupDeployment@2
+  displayName: 'Azure Deployment:Start action on ankhokha-update'
+  inputs:
+    azureSubscription: 'ayagrawa'
+    action: Start
+    resourceGroupName: 'ankhokha-update'
