@@ -3,9 +3,5 @@
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4123y
 
-
-variables:
- - group: a
-
 steps:
 - task: NuGetToolInstaller@0
